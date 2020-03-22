@@ -36,14 +36,23 @@ Una vez actualizado el script, efectuamos los siguientes pasos:
 ```
 packer validate ubuntu_jitsi.json
 ```
-![logo](https://raw.githubusercontent.com/lmfespinosa/DevOps-Provisioning-Terraform/master/Documentation/images/Projects/StatusCake/StatusCake_0.png)
+![logo](https://raw.githubusercontent.com/lmfespinosa/DevOps-BuildAutomatedMachinesImages-Packer/master/Documentation/images/Projects/jitsi-meet/jitsi-meet_0.png)
 
 2. Iniciamos la creación de la imagen mediante el comando:
 ```
 packer build ubuntu_jitsi.json
 ```
-![logo](https://raw.githubusercontent.com/lmfespinosa/DevOps-Provisioning-Terraform/master/Documentation/images/Projects/StatusCake/StatusCake_1.png) 
+![logo](https://raw.githubusercontent.com/lmfespinosa/DevOps-BuildAutomatedMachinesImages-Packer/master/Documentation/images/Projects/jitsi-meet/jitsi-meet_1.png) 
 
+Podemos ver como se ejecuta en Virtualbox todo el proceso del script hasta finalizarlo:
+
+![logo](https://raw.githubusercontent.com/lmfespinosa/DevOps-BuildAutomatedMachinesImages-Packer/master/Documentation/images/Projects/jitsi-meet/jitsi-meet_2.png) 
+
+Cuando el proceso finaliza, la máquina se destruye:
+
+![logo](https://raw.githubusercontent.com/lmfespinosa/DevOps-BuildAutomatedMachinesImages-Packer/master/Documentation/images/Projects/jitsi-meet/jitsi-meet_3.png) 
+
+El resultado de la imagen la tenemos en la carpeta "output-virtualbox-iso".
 
 
 
