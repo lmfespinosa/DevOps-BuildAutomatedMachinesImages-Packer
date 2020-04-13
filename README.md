@@ -38,6 +38,12 @@ https://packer.io/downloads.html
 
 * [Imagen de jitsi en Ubuntu server 18.04 para VirtualBox](Documentation/es/Projects/Ubuntu/ubuntu-18.04.4-server-amd64-VirtualBox/jitsi-meet/doc_jitsi-meet.es-ES.md)
 
+### Cloud:
+
+* Amazon Web Services (AWS):
+    * [Crear usuario en AWS](Documentation/es/Projects/Cloud/AWS/Commons/doc_aws_create_user.es-ES.md)
+
+
 ## Autores
 
 * **Luis Miguel Fernández** - *Initial work* - [lmfespinosa](https://github.com/lmfespinosa)

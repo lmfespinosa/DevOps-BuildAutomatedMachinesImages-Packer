@@ -34,9 +34,14 @@ https://packer.io/downloads.html
 
 ## Projects
 
-### Logs Applications
+### Ubuntu
 
 * [jitsi-meet image on Ubuntu server 18.04 to VirtualBox](Documentation/en/Projects/Ubuntu/ubuntu-18.04.4-server-amd64-VirtualBox/jitsi-meet/doc_jitsi-meet.es-ES.md)
+
+### Cloud:
+
+* Amazon Web Services (AWS):
+    * [Create user in AWS](Documentation/en/Projects/Cloud/AWS/Commons/doc_aws_create_user.en-GB.md)
 
 ## Authors
 

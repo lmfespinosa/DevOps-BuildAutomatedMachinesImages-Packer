@@ -1,0 +1,64 @@
+{
+    "variables": {
+      "aws_access_key": "",
+      "aws_secret_key": "",
+      "region": "eu-west-1"
+    },
+    "provisioners": [
+      {
+        "type": "shell",
+        "inline": ["mkdir /home/ubuntu/files"]
+      },
+      {
+        "type": "shell",
+        "inline": ["mkdir /home/ubuntu/web"]
+      },
+      {
+        "type": "file",
+        "source": "files/static/webnode/example.js",
+        "destination": "/home/ubuntu/web/web.js"
+      },
+      {
+        "type": "file",
+        "source": "files/templates/nginx/nginx.conf",
+        "destination": "/home/ubuntu/files/nginx.conf"
+      },
+      {
+        "type": "shell",
+        "execute_command": "echo 'ubuntu' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+        "script": "scripts/aws_node.sh"
+      },
+      {
+        "type": "shell",
+        "execute_command": "echo 'ubuntu' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+        "script" : "scripts/nginx.sh"
+      },
+      {
+        "type": "shell",
+        "execute_command": "echo 'ubuntu' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+        "script" : "scripts/aws_upload_node_app.sh"
+      }
+    ],
+    "builders": [{
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "region": "eu-west-1",
+      "source_ami_filter": {
+        "filters": {
+          "virtualization-type": "hvm",
+          "name": "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*",
+          "root-device-type": "ebs"
+        },
+        "owners": [
+          "099720109477"
+        ],
+        "most_recent": true
+      },
+      "instance_type": "t2.micro",
+      "ssh_username": "ubuntu",
+      "ami_name": "packer-mean {{timestamp}}",
+      "associate_public_ip_address": "true",
+      "ami_groups": "all"
+    }]
+  }
