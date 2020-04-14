@@ -42,6 +42,7 @@ https://packer.io/downloads.html
 
 * Amazon Web Services (AWS):
     * [Create user in AWS](Documentation/en/Projects/Cloud/AWS/Commons/doc_aws_create_user.en-GB.md)
+    * [Create Stack MEAN Image in AWS](Documentation/en/Projects/Cloud/AWS/Ubuntu-18.0.4.4/doc_stack_mean.en-GB.md)
 
 ## Authors
 
