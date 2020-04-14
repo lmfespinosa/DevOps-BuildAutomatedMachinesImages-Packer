@@ -1,4 +1,4 @@
-# Imagen Ubuntu con stack MEAN
+# Ubuntu Imagen with MEAN Stack in AWS
 
 ## Introduction
 
